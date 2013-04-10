@@ -1,0 +1,30 @@
+{EXTEND 'tpl/bin/test.html' }
+
+Main body
+*********
+{BLOCK 'body'}
+
+  <h2>This is the <em>aside.html</em> body block.</h2>
+  
+  <ul>
+    <li><strong>test:</strong> {{escape|upper $test}}</li>
+    <li><strong>foo:</strong> {{$foo}}</li>
+  </ul>
+  
+  {IMPORT 'tpl/bin/import.html', array('test' => 'toujours ok') }
+  
+  <p>
+    The difference with the <em>layout.html</em> body block is that it contains an aside block in it.
+    The aside block and the related html surrounding it will be displayed only if the block wasn't defined in the extending template.
+  </p>
+  
+  <h3>Now, as it's defined, the aside block</h3>
+  <aside>{BLOCK 'aside'} aside {/BLOCK}</aside>
+
+{/BLOCK}
+
+{BLOCK 'footer'}
+  <p>
+    This is the <em>aside.html</em> footer block. You'll not see it if extending block already defined this block.
+  </p>
+{/BLOCK}

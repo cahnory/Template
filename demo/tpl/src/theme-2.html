@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Démonstration : theme-2</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <link rel="stylesheet" href="assets/main.css" />
+</head>
+<body>
+  <section role="main">
+    <h1>Bienvenue dans theme-2</h1>
+    {BLOCK 'body'}
+      <div class="main">
+        <p>
+          Ceci est le <em>body</em> par défaut du <strong>theme-2</strong>. Il contient un block supplémentaire nommé "aside".
+        </p>
+      </div>
+      {FULLBLOCK 'aside'}
+        <aside>
+          <p>
+            Ce qui suit est le block <em>body aside</em>. Celui-ci ainsi que ce texte ne s'affichent que si le block <em>body aside</em> a été défini auparavant par un autre template.
+          </p>
+          {BLOCK 'aside' /}
+        </aside>
+      {/FULLBLOCK}
+    {/BLOCK}
+  </section>
+  <footer>
+    <strong>theme-2</strong> <em>footer</em> — {BLOCK 'footer' /}
+  </footer>
+</body>
+</html>

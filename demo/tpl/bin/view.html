@@ -1,0 +1,26 @@
+<?php $this->extend('tpl/bin/aside.html', array('foo' => 'bar')); ?>
+<?php $this->extend('tpl/bin/layout.html'); ?>
+
+Body > aside
+************
+<?php if($this->block->open('body', 'aside')): ?>
+
+  This is the <em>view.html</em> body aside block.
+
+<?php endif;$this->block->close(); ?>
+
+
+Main footer
+***********
+<?php if($this->block->open('footer')): ?>
+
+  <p>
+    This is the <em>view.html</em> footer block.
+  </p>
+  {{salut}}
+  <ul>
+    <li><strong>test:</strong> <?php echo $test; ?></li>
+    <li><strong>foo:</strong> <?php echo $foo; ?></li>
+  </ul>
+
+<?php endif;$this->block->close(); ?>

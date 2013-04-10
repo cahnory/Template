@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Démonstration : theme-1</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <link rel="stylesheet" href="assets/main.css" />
+</head>
+<body>
+  <section role="main">
+    <h1>Bienvenue dans theme-1</h1>
+    <?php if($this->block->open('body')): ?>
+      Ceci est le <em>body</em> par défaut du <strong>theme-1</strong>.
+    <?php endif;$this->block->close(); ?>
+  </section>
+
+  <footer>
+    <strong>theme-1</strong> <em>footer</em> — <?php $this->block->hook('footer'); ?>
+  </footer>
+</body>
+</html>

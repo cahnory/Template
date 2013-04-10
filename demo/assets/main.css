@@ -1,0 +1,13 @@
+section, footer {
+  background: #F7F7F7;
+  margin: 1em auto;
+  overflow: hidden;
+  padding: 1em;
+  width: 550px;
+}
+.main {
+}
+aside {
+  background: #EEE;
+  padding: 1px .5em;
+}

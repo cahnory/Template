@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDepend>
+  <Packages>
+    <Package name="Template">
+      <Stats>
+        <TotalClasses>7</TotalClasses>
+        <ConcreteClasses>6</ConcreteClasses>
+        <AbstractClasses>1</AbstractClasses>
+        <Ca>1</Ca>
+        <Ce>1</Ce>
+        <A>0.142857142857</A>
+        <I>0.5</I>
+        <D>0.357142857143</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/Block.php">Block</Class>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/Engine.php">Engine</Class>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/Executioner.php">Executioner</Class>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/Parser.php">Parser</Class>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/SandBox.php">Sandbox</Class>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/Template.php">Template</Class>
+      </ConcreteClasses>
+      <AbstractClasses>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/AbstractSandbox.php">AbstractSandbox</Class>
+      </AbstractClasses>
+      <DependsUpon>
+        <Package></Package>
+      </DependsUpon>
+      <UsedBy>
+        <Package>Template\Filter</Package>
+      </UsedBy>
+    </Package>
+    <Package name="Template\Filter">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/Volumes/TRAVAUX/Dropbox/Server/www/Bricks/Template/3/Template/Filter/String.php">String</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Template</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+  </Packages>
+  <Cycles/>
+</PDepend>

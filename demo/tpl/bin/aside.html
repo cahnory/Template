@@ -1,0 +1,30 @@
+<?php $this->extend('tpl/bin/test.html'); ?>
+
+Main body
+*********
+<?php if($this->block->open('body')): ?>
+
+  <h2>This is the <em>aside.html</em> body block.</h2>
+  
+  <ul>
+    <li><strong>test:</strong> <?php echo $this->filter($test, 'escape','upper'); ?></li>
+    <li><strong>foo:</strong> <?php echo $foo; ?></li>
+  </ul>
+  
+  <?php $this->import('tpl/bin/import.html', array('test' => 'toujours ok')); ?>
+  
+  <p>
+    The difference with the <em>layout.html</em> body block is that it contains an aside block in it.
+    The aside block and the related html surrounding it will be displayed only if the block wasn't defined in the extending template.
+  </p>
+  
+  <h3>Now, as it's defined, the aside block</h3>
+  <aside><?php if($this->block->open('aside')): ?> aside <?php endif;$this->block->close(); ?></aside>
+
+<?php endif;$this->block->close(); ?>
+
+<?php if($this->block->open('footer')): ?>
+  <p>
+    This is the <em>aside.html</em> footer block. You'll not see it if extending block already defined this block.
+  </p>
+<?php endif;$this->block->close(); ?>

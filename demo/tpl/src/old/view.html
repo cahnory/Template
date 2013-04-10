@@ -1,0 +1,26 @@
+{EXTEND 'tpl/bin/aside.html', array('foo' => 'bar')}
+{EXTEND 'tpl/bin/layout.html'}
+
+Body > aside
+************
+{BLOCK 'body', 'aside'}
+
+  This is the <em>view.html</em> body aside block.
+
+{/BLOCK}
+
+
+Main footer
+***********
+{BLOCK 'footer'}
+
+  <p>
+    This is the <em>view.html</em> footer block.
+  </p>
+  \{{salut}}
+  <ul>
+    <li><strong>test:</strong> {{$test}}</li>
+    <li><strong>foo:</strong> {{$foo}}</li>
+  </ul>
+
+{/BLOCK}
